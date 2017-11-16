@@ -18,7 +18,7 @@ struct PostServiceFireBase {
 		formatter.dateFormat = "yyyyMMddHH:mm"
 		let currentDateTimeString = formatter.string(from: currentDateTime)
 		
-		let filePath = "UserProfile/userPhoto-\(currentDateTimeString)"
+		let filePath = "YourPath\(currentDateTimeString)" // change path as per your requirement
 		
 		let imageRef = Storage.storage().reference().child(filePath)
 		StorageServiceFireBase.uploadImage(image, at: imageRef) { (downloadURL) in
