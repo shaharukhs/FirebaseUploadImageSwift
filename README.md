@@ -7,7 +7,8 @@ Add your **GoogleService-Info.plist** to project and then run
 just call this at `func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])`
 
     if let pickedImage = info[UIImagePickerControllerEditedImage] as? UIImage {
-		PostServiceFireBase.create(for: pickedImage) { (downloadURL) in
+    let path = "YourFilePath\YourFileName" //replace this line as per your file structure.
+		PostServiceFireBase.create(for: pickedImage, path: path) { (downloadURL) in
 			guard let downloadURL = downloadURL else {
 				print("Download url not found")
 				return
