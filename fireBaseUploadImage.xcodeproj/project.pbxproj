@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C27006081FA44AC700F76BCC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2F0375A1FA438000025A28A /* GoogleService-Info.plist */; };
 		C28AE7091FA49A2000660502 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C28AE7081FA49A2000660502 /* AudioToolbox.framework */; };
 		C2F037491FA437000025A28A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F037481FA437000025A28A /* AppDelegate.swift */; };
 		C2F0374B1FA437000025A28A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F0374A1FA437000025A28A /* ViewController.swift */; };
@@ -31,7 +30,6 @@
 		C2F0374F1FA437000025A28A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2F037521FA437000025A28A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C2F037541FA437000025A28A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C2F0375A1FA438000025A28A /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C2F0375B1FA43AED0025A28A /* StorageServiceFireBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageServiceFireBase.swift; sourceTree = "<group>"; };
 		C2F0375D1FA43B1C0025A28A /* PostServiceFireBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostServiceFireBase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -144,7 +142,6 @@
 				C270060D1FA4899700F76BCC /* Controller */,
 				C270060F1FA489F700F76BCC /* SupportingFiles */,
 				C2F037541FA437000025A28A /* Info.plist */,
-				C2F0375A1FA438000025A28A /* GoogleService-Info.plist */,
 			);
 			path = fireBaseUploadImage;
 			sourceTree = "<group>";
@@ -212,7 +209,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2F037531FA437000025A28A /* LaunchScreen.storyboard in Resources */,
-				C27006081FA44AC700F76BCC /* GoogleService-Info.plist in Resources */,
 				C2F037501FA437000025A28A /* Assets.xcassets in Resources */,
 				C2F0374E1FA437000025A28A /* Main.storyboard in Resources */,
 			);

@@ -13,7 +13,7 @@ import Photos
 import AudioToolbox
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
+    
 	@IBOutlet weak var userPhotoImageView: UIImageView!
 	@IBOutlet weak var downloadImageStringLabel: UILabel!
 	let imagePicker = UIImagePickerController()
@@ -46,11 +46,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 			print("It is not determined until now")
 			
 		case .restricted:
-			// same same
 			print("User do not have access to photo album.")
 			
 		case .denied:
-			// same same
 			print("User has denied the permission.")
 		}
 	}
@@ -110,7 +108,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 		if let pickedImage = info[UIImagePickerControllerEditedImage] as? UIImage {
 			self.userPhotoImageView.image = pickedImage
 			//			PostServiceFireBase.create(for: pickedImage)
-			PostServiceFireBase.create(for: pickedImage) { (downloadURL) in
+            let currentDateTime = Date()
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyyMMddHH:mm"
+            let currentDateTimeString = formatter.string(from: currentDateTime)
+            
+            let filePath = "YourPath\(currentDateTimeString)" // change path as per your requirement
+            PostServiceFireBase.create(for: pickedImage, path: filePath) { (downloadURL) in
 				guard let downloadURL = downloadURL else {
 					print("Download url not found")
 					Toast(text: "Failed to upload image").show()
