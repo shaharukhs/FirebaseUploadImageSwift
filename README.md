@@ -4,17 +4,17 @@ Add your **GoogleService-Info.plist** to project and then run
 [Download a configuration file for your iOS app](https://support.google.com/firebase/answer/7015592?hl=en#ios)
 
 
-just call this at `func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])`
+just call this `func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])`
 
     if let pickedImage = info[UIImagePickerControllerEditedImage] as? UIImage {
     let path = "YourFilePath\YourFileName" //replace this line as per your file structure.
-		PostServiceFireBase.create(for: pickedImage, path: path) { (downloadURL) in
-			guard let downloadURL = downloadURL else {
-				print("Download url not found")
+		PostServiceFireBase.create(for: pickedImage, path: path) { (imageURL) in
+			guard let imageURL = imageURL else {
+				print("Image url not found")
 				return
 			}
-			let urlString = downloadURL
-			print("image url for download image :: \(urlString)")
+			let urlString = imageURL
+			print("image url :: \(urlString)")
 		}
 	}
   
